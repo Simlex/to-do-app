@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {color: var(--check-box); font-size: 11px; text-align: center; }
+    .attribution a {
+      color: var(--check-box);
+    }
+  </style>
+</head>
+<body>
+
+<div class="overlay clear">
+  
+    <div class="overlay__contents">
+      <div class="svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+        <path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 
+        8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 
+        .707.707 0 8.84 8.132 16.971 0z"/></svg>
+      </div>
+      
+    <!-- <form action="POST"> -->
+      <p>Add Task</p>
+      <input type="text" placeholder="Type in task" id="task-input">
+      <input type="button" value="Submit">
+    <!-- /form> -->
+    </div>
+</div>
+
+    
+  <div class="hero-bg">
+    <img src="./images/bg-mobile-dark.jpg" class="hero-img" alt="">
+  </div>
+
+  <div class="container"> 
+    <div class="hero-details">
+      <h3>TODO</h3>
+      <div class="hero-details__theme">
+        <span>Change theme</span>
+        <!-- <svg class="theme" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+        <path fill="#FFF" fill-rule="evenodd" 
+        d="M13 21a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-5.657-2.343a1 
+        1 0 010 1.414l-2.121 2.121a1 1 0 01-1.414-1.414l2.12-2.121a1 1 0 011.415 
+        0zm12.728 0l2.121 2.121a1 1 0 01-1.414 1.414l-2.121-2.12a1 1 0 
+        011.414-1.415zM13 8a5 5 0 110 10 5 5 0 010-10zm12 4a1 1 0 110 2h-3a1 
+        1 0 110-2h3zM4 12a1 1 0 110 2H1a1 1 0 110-2h3zm18.192-8.192a1 1 0 010 
+        1.414l-2.12 2.121a1 1 0 01-1.415-1.414l2.121-2.121a1 1 0 011.414 0zm-16.97 
+        0l2.121 2.12A1 1 0 015.93 7.344L3.808 5.222a1 1 0 011.414-1.414zM13 0a1 1 0 
+        011 1v3a1 1 0 11-2 0V1a1 1 0 011-1z"/></svg> -->
+      </div>
+      
+    </div>
+
+  <div class="create">
+    <!-- <span></span> -->
+    <p>Create a new todo..</p>
+  </div>
+
+  <div class="added-tasks">
+
+    <!-- <div class="added-tasks__tasks clear">
+      <div class="click">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
+        </span>
+        <p>Complete Online javascript course 1</p>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+        <path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 
+        8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 
+        .707.707 0 8.84 8.132 16.971 0z"/></svg>
+    </div> -->
+
+    <div class="added-tasks__tasks">
+      <div class="click">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
+        </span>
+        <p>Complete Online javascript course 1</p>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+        <path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 
+        8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 
+        .707.707 0 8.84 8.132 16.971 0z"/></svg>
+    </div>
+
+    <div class="added-tasks__tasks">
+      <div class="click">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
+        </span>
+        <p>Complete Online javascript course 2</p>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+        <path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 
+        8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 
+        .707.707 0 8.84 8.132 16.971 0z"/></svg>
+    </div>
+
+    <div class="added-tasks__tasks">
+      <div class="click">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
+        </span>
+        <p>Complete Online javascript course 3</p>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+        <path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 
+        8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 
+        .707.707 0 8.84 8.132 16.971 0z"/></svg>
+    </div>
+
+    <div class="added-tasks__tasks">
+      <div class="click">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
+        </span>
+        <p>Complete Online javascript course 4</p>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+        <path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 
+        8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 
+        .707.707 0 8.84 8.132 16.971 0z"/></svg>
+    </div>
+
+    <div class="added-tasks__tasks">
+      <div class="click">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
+        </span>
+        <p>Complete Online javascript course 5</p>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+        <path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 
+        8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 
+        .707.707 0 8.84 8.132 16.971 0z"/></svg>
+    </div>
+
+    <div class="added-tasks__tasks">
+      <div class="click">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"/></svg>
+        </span>
+        <p>Complete Online javascript course 6</p>
+      </div>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+        <path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 
+        8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 
+        .707.707 0 8.84 8.132 16.971 0z"/></svg>
+    </div>
+
+    <div class="added-tasks__details">
+      <p class="items"><span></span> items left</p>
+      <p> <span class="selected">0</span> selected</p>
+      <p class="completed">Clear Completed</p>
+    </div>
+
+  </div>
+
+  <div class="navigation-bar">
+    <p>All</p>
+    <p>Active</p>
+    <p>Completed</p>
+  </div>
+  
+<!--   <div class="footer">
+  <p>Drag and drop to reorder list</p>
+  </div> -->
+  
+</div>
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>

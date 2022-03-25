@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+:root {
+  --body-bg: #161626;
+  --box-bg: #25273C;
+  --check-box: #4F5268;
+  --check-box-text: #73758A;
+  --tasks-text: #C7C9E2;
+}
+
+.light-theme {
+  --body-bg: #F7F7F9;
+  --box-bg: #ffffff;
+  --check-box: #4F5268;
+  --check-box-text: #73758A;
+  --tasks-text: #62606B;
+}
+
+/* $body-bg: #161620;
+$box-bg: #25273C;
+$check-box: #4F5268;
+$check-box-text: #73758A;
+$tasks-text: #C7C9E2; */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Josefin Sans";
+  -webkit-transition: 300ms all linear;
+  transition: 300ms all linear;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: .4rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: rgba(165, 141, 255, 0.4);
+  border-radius: 5rem;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #a58dff;
+}
+
+body {
+  background-color: var(--body-bg);
+  color: #fff;
+  /* overflow: hidden; - Add style wirh js when overlay shows up*/
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 1000;
+  -webkit-transition: 300ms all ease;
+  transition: 300ms all ease;
+}
+
+.overlay__contents {
+  border: 0.4px solid var(--check-box);
+  border-radius: 8px;
+  background-color: var(--body-bg);
+  margin: 0 20px;
+  margin-top: 150px;
+  padding: 34px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.overlay__contents p {
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--check-box-text);
+}
+
+.overlay__contents input {
+  width: 275px;
+  padding: 14px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--check-box);
+  background-color: var(--body-bg);
+  color: var(--check-box-text);
+}
+
+.overlay__contents input[type="button"] {
+  margin-top: 24px;
+  color: var(--check-box-text);
+  cursor: pointer;
+  border: 1px solid var(--check-box);
+  background-color: var(--check-box);
+}
+
+.overlay__contents input[type="button"]:hover {
+  background-color: var(--box-bg);
+}
+
+.overlay__contents .svg {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid var(--check-box);
+}
+
+.overlay__contents .svg:hover {
+  /* border: 1px solid $tasks-text; */
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.overlay__contents .svg:hover path {
+  fill: #f10000;
+}
+
+.overlay__contents .svg svg {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+}
+
+.overlay__contents .svg svg path {
+  fill: var(--check-box-text);
+}
+
+.container {
+  padding: 0 24px;
+}
+
+.hero-bg {
+  background-image: url("./images/bg-mobile-dark.jpg");
+  position: absolute;
+  z-index: -1;
+  height: 200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-bg .hero-img {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.hero-details {
+  padding: 48px 0 40px;
+  font-size: 20px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero-details img {
+  height: 20px;
+}
+
+.hero-details__theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.hero-details__theme span {
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+.create {
+  background-color: var(--box-bg);
+  color: var(--check-box-text);
+  height: 48px;
+  padding: 20px;
+  font-size: 12px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  /* &:hover {
+        color: #fff;
+    } */
+}
+
+.create span {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--check-box);
+  border-radius: 20px;
+  margin-right: 12px;
+}
+
+.added-tasks {
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 16px;
+  /* :not(:nth-of-type(1)) {
+        color: $tasks-text;
+    } */
+}
+
+.added-tasks__tasks, .added-tasks__details {
+  background-color: var(--box-bg);
+  color: var(--check-box-text);
+  height: 52px;
+  padding: 20px;
+  font-size: 12px;
+  border-bottom: 1px solid var(--check-box);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.added-tasks__details {
+  border-bottom: none;
+}
+
+.added-tasks__details .completed {
+  cursor: pointer;
+}
+
+.added-tasks__details .completed:hover {
+  color: var(--check-box);
+}
+
+.click {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
+
+.click p {
+  cursor: pointer;
+}
+
+.click p:hover {
+  color: var(--check-box);
+}
+
+.click span {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--check-box);
+  border-radius: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+  background: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.click span svg {
+  display: none;
+}
+
+.clicked {
+  -webkit-text-decoration: line-through 2px var(--check-box);
+          text-decoration: line-through 2px var(--check-box);
+}
+
+.clicked span {
+  background: -webkit-gradient(linear, left top, left bottom, from(#72B8FD), to(#C274FF));
+  background: linear-gradient(180deg, #72B8FD 0%, #C274FF 100%);
+}
+
+.clicked span svg {
+  display: block;
+}
+
+svg {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  cursor: pointer;
+}
+
+svg:hover path {
+  fill: var(--check-box-text);
+}
+
+.clear {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.navigation-bar {
+  background-color: var(--box-bg);
+  color: var(--check-box-text);
+  height: 52px;
+  margin: 16px 0 18px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navigation-bar p:hover {
+  color: var(--check-box);
+}
+
+.navigation-bar p:nth-child(1) {
+  color: #0E51E1;
+}
+
+.footer {
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--check-box-text);
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=style.css.map */
